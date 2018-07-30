@@ -4,7 +4,7 @@
       <a-col class="side-col" :span="4">
         <manager-sidebar></manager-sidebar>
       </a-col>
-      <a-col :span="20">
+      <a-col class="main-col" :span="20">
         <manager-header></manager-header>
         <router-view></router-view>
         <manager-footer></manager-footer>
@@ -33,5 +33,8 @@
     .side-row
       height 100%
       .side-col
+        height 100%
+      .main-col
+        background-color #f1f3f5
         height 100%
 </style>
