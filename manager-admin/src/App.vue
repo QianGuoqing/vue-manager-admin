@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <a-row>
-      <a-col :span="4">
+    <a-row class="side-row">
+      <a-col class="side-col" :span="4">
         <manager-sidebar></manager-sidebar>
       </a-col>
       <a-col :span="20">
@@ -27,6 +27,11 @@
   }
 </script>
 
-<style>
-
+<style lang="stylus">
+  html, body, #app
+    height 100%
+    .side-row
+      height 100%
+      .side-col
+        height 100%
 </style>
