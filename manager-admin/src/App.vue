@@ -34,7 +34,9 @@
       height 100%
       .side-col
         height 100%
+        overflow hidden
       .main-col
         background-color #f1f3f5
         height 100%
+        overflow auto
 </style>
