@@ -9,18 +9,18 @@
         mode="vertical"
         theme="dark">
         <a-menu-item key="/home">
-          <span><a-icon type="home"/>首页</span>
+          <span @click="toHome"><a-icon type="home"/>首页</span>
         </a-menu-item>
         <a-sub-menu key="/ui">
           <span slot="title"><span><a-icon type="switcher"/>UI</span></span>
-          <a-menu-item key="/ui/button">按钮</a-menu-item>
-          <a-menu-item key="/ui/modals">弹框</a-menu-item>
-          <a-menu-item key="/ui/loading">Loading</a-menu-item>
-          <a-menu-item key="/ui/notification">通知提醒</a-menu-item>
-          <a-menu-item key="/ui/messages">全局Message</a-menu-item>
-          <a-menu-item key="/ui/tabs">Tab页签</a-menu-item>
-          <a-menu-item key="/ui/gallery">图片画廊</a-menu-item>
-          <a-menu-item key="/ui/carousel">轮播图</a-menu-item>
+          <a-menu-item key="/ui/button"><span @click="toButton">按钮</span></a-menu-item>
+          <a-menu-item key="/ui/modals"><span @click="toModal">弹框</span></a-menu-item>
+          <a-menu-item key="/ui/loading"><span @click="toLoading">Loading</span></a-menu-item>
+          <a-menu-item key="/ui/notification"><span @click="toNotification">通知提醒</span></a-menu-item>
+          <a-menu-item key="/ui/messages"><span @click="toMessage">全局Message</span></a-menu-item>
+          <a-menu-item key="/ui/tabs"><span @click="toTab">Tab页签</span></a-menu-item>
+          <a-menu-item key="/ui/gallery"><span @click="toGallery">图片画廊</span></a-menu-item>
+          <a-menu-item key="/ui/carousel"><span @click="toCarousel">轮播图</span></a-menu-item>
         </a-sub-menu>
         <a-sub-menu key="/form">
           <span slot="title"><span><a-icon type="form"/>表单</span></span>
@@ -76,7 +76,54 @@
     created() {
       this.menuList = menuListData
       console.log(this.menuList)
-    }
+    },
+    methods: {
+      toHome() {
+        this.$router.push({
+          path: '/home'
+        })
+      },
+      toButton() {
+        this.$router.push({
+          path: '/ui/button'
+        })
+      },
+      toModal() {
+        this.$router.push({
+          path: '/ui/modal'
+        })
+      },
+      toLoading() {
+        this.$router.push({
+          path: '/ui/loading'
+        })
+      },
+      toNotification() {
+        this.$router.push({
+          path: '/ui/notification'
+        })
+      },
+      toMessage() {
+        this.$router.push({
+          path: '/ui/message'
+        })
+      },
+      toTab() {
+        this.$router.push({
+          path: '/ui/tab'
+        })
+      },
+      toGallery() {
+        this.$router.push({
+          path: '/ui/gallery'
+        })
+      },
+      toCarousel() {
+        this.$router.push({
+          path: '/ui/carousel'
+        })
+      }
+    },
   }
 </script>
 
