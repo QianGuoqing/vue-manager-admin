@@ -16,6 +16,10 @@ import FormPage from '../views/form-page/FormPage.vue'
 import LoginView from '../views/form-page/login-view/LoginView.vue'
 import RegisterView from '../views/form-page/register-view/RegisterView.vue'
 
+import TablePage from '../views/table-page/TablePage.vue'
+import BasicTable from '../views/table-page/basic-table/BasicTable.vue'
+import AdvaceTable from '../views/table-page/advance-table/AdvanceTable.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -87,6 +91,23 @@ export default new Router({
           path: 'register',
           name: 'RegisterView',
           component: RegisterView
+        }
+      ]
+    },
+    {
+      path: '/table',
+      name: 'TablePage',
+      component: TablePage,
+      children: [
+        {
+          path: 'basic',
+          name: 'BasicTable',
+          component: BasicTable
+        },
+        {
+          path: 'advance',
+          name: 'AdvanceTable',
+          component: AdvaceTable
         }
       ]
     }

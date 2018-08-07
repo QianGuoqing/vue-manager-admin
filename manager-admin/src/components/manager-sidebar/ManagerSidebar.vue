@@ -29,8 +29,8 @@
         </a-sub-menu>
         <a-sub-menu key="/table">
           <span slot="title"><span><a-icon type="table"/>表格</span></span>
-          <a-menu-item key="/table/basic">基础表格</a-menu-item>
-          <a-menu-item key="/table/high">高级表格</a-menu-item>
+          <a-menu-item key="/table/basic"><span @click="toBasicTable">基础表格</span></a-menu-item>
+          <a-menu-item key="/table/high"><span @click="toAdvanceTable">高级表格</span></a-menu-item>
         </a-sub-menu>
         <a-menu-item key="/rich">
           <span><a-icon type="file-markdown"/>富文本</span>
@@ -131,6 +131,16 @@
       toRegister() {
         this.$router.push({
           path: '/form/register'
+        })
+      },
+      toBasicTable() {
+        this.$router.push({
+          path: '/table/basic'
+        })
+      },
+      toAdvanceTable() {
+        this.$router.push({
+          path: '/table/advance'
         })
       }
     },
