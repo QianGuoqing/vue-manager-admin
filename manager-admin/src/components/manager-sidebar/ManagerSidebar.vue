@@ -24,8 +24,8 @@
         </a-sub-menu>
         <a-sub-menu key="/form">
           <span slot="title"><span><a-icon type="form"/>表单</span></span>
-          <a-menu-item key="/form/login">登陆</a-menu-item>
-          <a-menu-item key="/form/register">注册</a-menu-item>
+          <a-menu-item key="/form/login"><span @click="toLogin">登陆</span></a-menu-item>
+          <a-menu-item key="/form/register"><span @click="toRegister">注册</span></a-menu-item>
         </a-sub-menu>
         <a-sub-menu key="/table">
           <span slot="title"><span><a-icon type="table"/>表格</span></span>
@@ -121,6 +121,16 @@
       toCarousel() {
         this.$router.push({
           path: '/ui/carousel'
+        })
+      },
+      toLogin() {
+        this.$router.push({
+          path: '/form/login'
+        })
+      },
+      toRegister() {
+        this.$router.push({
+          path: '/form/register'
         })
       }
     },

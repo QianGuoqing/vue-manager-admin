@@ -12,6 +12,10 @@ import TabView from '../views/ui-page/tab-view/TabView.vue'
 import GalleryView from '../views/ui-page/gallery-view/GalleryView.vue'
 import CarouselView from '../views/ui-page/carousel-view/CarouselView.vue'
 
+import FormPage from '../views/form-page/FormPage.vue'
+import LoginView from '../views/form-page/login-view/LoginView.vue'
+import RegisterView from '../views/form-page/register-view/RegisterView.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -66,6 +70,23 @@ export default new Router({
           path: 'carousel',
           name: 'CarouselView',
           component: CarouselView
+        }
+      ]
+    },
+    {
+      path: '/form',
+      name: 'FormPage',
+      component: FormPage,
+      children: [
+        {
+          path: 'login',
+          name: 'LoginView',
+          component: LoginView
+        },
+        {
+          path: 'register',
+          name: 'RegisterView',
+          component: RegisterView
         }
       ]
     }
